@@ -1,8 +1,16 @@
 import React from 'react'
 
-const WeatherPage = () => {
+type Props ={
+    params: {
+        city: string;
+        lat: string;
+        long: string;
+    }
+}
+
+const WeatherPage = ({params: {city, lat, long}}: Props) => {
     return (
-        <div>Welcoe to WeatherPage</div>
+        <div>Welcoe to WeatherPage: {city} {lat} {long}</div>
     )
 }
 
